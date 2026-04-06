@@ -14,8 +14,7 @@ import './App.css';
 
 const profile = {
   brand: 'Estanislao Torres Campi',
-  logoMain: 'DevBy',
-  logoAccent: 'TorresCampi',
+  logoImage: 'https://res.cloudinary.com/dzaceww4a/image/upload/v1775516083/logo1_b3mrvu.png', // Reemplaza con tu URL de imagen
   name: 'Estanislao Torres Campi',
   role: 'Desarrollador Full Stack',
   headline: 'Creo paginas y aplicaciones que convierten ideas en resultados.',
@@ -24,7 +23,7 @@ const profile = {
   availability: 'Disponible para nuevos proyectos',
   location: 'Argentina | Trabajo remoto',
   email: 'estanislaotorres@gmail.com',
-  phone: '3814439055',
+  phone: '543814439055',
   cvUrl: 'https://drive.google.com/file/d/15DvleSERpeywyEBvw642kB4PTYCmVRFV/view?usp=drive_link'
 };
 
@@ -117,16 +116,9 @@ const socialProfiles = [
     color: '#0a66c2'
   },
   {
-    name: 'Hoster PMS',
-    handle: 'Sistema donde trabaje',
-    url: 'https://www.linkedin.com/company/hoster-pms/?viewAsMember=true',
-    icon: <FaLinkedin />,
-    color: '#0a66c2'
-  },
-  {
     name: 'Telefono',
     handle: profile.phone,
-    url: `tel:${profile.phone}`,
+    url: `https://wa.me/${profile.phone}`,
     icon: <FaPhoneAlt />,
     color: '#0f766e'
   },
@@ -146,7 +138,7 @@ const Header = () => {
     <header className="header">
       <div className="container header-inner">
         <a className="logo" href="#inicio">
-          {profile.logoMain}<span>{profile.logoAccent}</span>
+          <img src={profile.logoImage} alt="Logo" className="logo-img" />
         </a>
 
         <button
@@ -179,6 +171,7 @@ const Hero = () => (
   <section id="inicio" className="section-block hero-section">
     <div className="container hero-grid">
       <div className="hero-copy fade-up">
+        <h2 className="hero-name">{profile.name}</h2>
         <p className="eyebrow">{profile.role}</p>
         <h1>{profile.headline}</h1>
         <p>
@@ -223,7 +216,7 @@ const Hero = () => (
           ))}
         </div>
         <p className="hero-note">
-          {profile.name} | {profile.role} | {profile.phone}
+          {profile.name} | {profile.role}
         </p>
       </aside>
     </div>
@@ -241,7 +234,7 @@ const About = () => (
       <div className="about-layout">
         <div className="about-image-wrap fade-up">
           <img
-            src="https://res.cloudinary.com/dzaceww4a/image/upload/f_auto,q_auto/IMG-20251030-WA0088_h1sex1"
+            src="https://res.cloudinary.com/dzaceww4a/image/upload/v1775513508/IMG-20251030-WA0088_omov1s.jpg"
             alt="Retrato profesional"
           />
         </div>
@@ -478,15 +471,8 @@ const Footer = () => (
   <footer className="footer">
     <div className="container footer-inner">
       <p>
-        © {new Date().getFullYear()} {profile.brand}. {profile.role}. Contacto: {profile.email} | {profile.phone}
+        © {new Date().getFullYear()} {profile.brand}. {profile.role}.
       </p>
-      <div className="footer-links">
-        {navigation.map((item) => (
-          <a href={`#${item.id}`} key={item.id}>
-            {item.label}
-          </a>
-        ))}
-      </div>
     </div>
   </footer>
 );

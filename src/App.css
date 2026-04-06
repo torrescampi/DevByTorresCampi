@@ -3,13 +3,13 @@
 :root {
   --bg-cream: #fff8ef;
   --bg-sand: #f8eedf;
-  --surface: #fffdf8;
-  --surface-strong: #ffffff;
+  --surface: rgba(0, 123, 255, 0.02);
+  --surface-strong: rgba(0, 123, 255, 0.04);
   --text-main: #14213d;
   --text-soft: #4b5563;
-  --accent: #e76f51;
-  --accent-deep: #c85f45;
-  --accent-alt: #0f766e;
+  --accent: #0055A4;
+  --accent-deep: #003366;
+  --accent-alt: #17a2b8;
   --border: #efdac1;
   --shadow-soft: 0 14px 38px rgba(15, 23, 42, 0.12);
 }
@@ -23,10 +23,7 @@ body {
   font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
   color: var(--text-main);
   line-height: 1.6;
-  background:
-    radial-gradient(circle at 88% 12%, rgba(231, 111, 81, 0.18), transparent 33%),
-    radial-gradient(circle at 12% 18%, rgba(15, 118, 110, 0.14), transparent 30%),
-    linear-gradient(160deg, var(--bg-cream), var(--bg-sand));
+  background: #e0e0e0;
 }
 
 a {
@@ -53,7 +50,7 @@ a {
 .App::before {
   width: 280px;
   height: 280px;
-  background: rgba(231, 111, 81, 0.25);
+  background: rgba(0, 123, 255, 0.1);
   top: -80px;
   right: -40px;
 }
@@ -61,7 +58,7 @@ a {
 .App::after {
   width: 220px;
   height: 220px;
-  background: rgba(15, 118, 110, 0.2);
+  background: rgba(23, 162, 184, 0.08);
   bottom: 40px;
   left: -60px;
 }
@@ -80,7 +77,7 @@ a {
   margin: 0 0 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.11em;
-  font-size: 0.76rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--accent-alt);
 }
@@ -92,12 +89,19 @@ a {
   line-height: 1.14;
 }
 
+.hero-name {
+  margin: 0 0 0;
+  font-size: 3rem;
+  font-family: 'DM Serif Display', Georgia, serif;
+  color: var(--text-main);
+}
+
 .header {
   position: sticky;
   top: 0;
   z-index: 40;
   backdrop-filter: blur(10px);
-  background: rgba(255, 248, 239, 0.85);
+  background: rgba(0, 123, 255, 0.08);
   border-bottom: 1px solid var(--border);
 }
 
@@ -105,7 +109,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.9rem 0;
+  padding: 0.35rem 0;
 }
 
 .logo {
@@ -114,8 +118,10 @@ a {
   letter-spacing: 0.03em;
 }
 
-.logo span {
-  color: var(--accent);
+.logo-img {
+  height: 80px;
+  width: auto;
+  max-width: 300px;
 }
 
 .menu-button {
@@ -603,7 +609,7 @@ a {
 .footer-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
   color: var(--text-soft);
 }
@@ -651,6 +657,10 @@ a {
 }
 
 @media (max-width: 760px) {
+  html {
+    font-size: 120%;
+  }
+
   .section-block {
     padding: 4.2rem 0;
   }
