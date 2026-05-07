@@ -191,38 +191,40 @@ const ProjectModal = ({ project, onClose }) => {
         </div>
 
         <div className="modal-body">
-          <div className="modal-gallery">
-            <img 
-              src={project.images[currentImageIndex]} 
-              alt={`${project.title} - ${currentImageIndex + 1}`}
-              className="modal-main-image"
-            />
-            
+          <div className="modal-left">
+            <div className="modal-gallery">
+              <img 
+                src={project.images[currentImageIndex]} 
+                alt={`${project.title} - ${currentImageIndex + 1}`}
+                className="modal-main-image"
+              />
+              
+              {project.images.length > 1 && (
+                <>
+                  <button className="modal-nav prev" onClick={prevImage}>
+                    <FaChevronLeft />
+                  </button>
+                  <button className="modal-nav next" onClick={nextImage}>
+                    <FaChevronRight />
+                  </button>
+                </>
+              )}
+            </div>
+
             {project.images.length > 1 && (
-              <>
-                <button className="modal-nav prev" onClick={prevImage}>
-                  <FaChevronLeft />
-                </button>
-                <button className="modal-nav next" onClick={nextImage}>
-                  <FaChevronRight />
-                </button>
-              </>
+              <div className="modal-thumbnails">
+                {project.images.map((img, idx) => (
+                  <div 
+                    key={idx}
+                    className={`modal-thumb ${idx === currentImageIndex ? 'active' : ''}`}
+                    onClick={() => setCurrentImageIndex(idx)}
+                  >
+                    <img src={img} alt={`Miniatura ${idx + 1}`} />
+                  </div>
+                ))}
+              </div>
             )}
           </div>
-
-          {project.images.length > 1 && (
-            <div className="modal-thumbnails">
-              {project.images.map((img, idx) => (
-                <div 
-                  key={idx}
-                  className={`modal-thumb ${idx === currentImageIndex ? 'active' : ''}`}
-                  onClick={() => setCurrentImageIndex(idx)}
-                >
-                  <img src={img} alt={`Miniatura ${idx + 1}`} />
-                </div>
-              ))}
-            </div>
-          )}
 
           <div className="modal-info">
             <h4>Descripción</h4>
