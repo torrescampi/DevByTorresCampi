@@ -931,14 +931,15 @@ a {
   flex-direction: column;
   overflow-y: auto;
   flex: 1;
+  min-height: 300px;
 }
 
 /* Galería principal */
 .modal-gallery {
   position: relative;
   background: #f8f9fa;
-  min-height: 350px;
-  max-height: 60vh;
+  min-height: 300px;
+  max-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -947,7 +948,7 @@ a {
 
 .modal-main-image {
   width: 100%;
-  max-height: 55vh;
+  max-height: 45vh;
   object-fit: contain;
   display: block;
   image-rendering: auto;
@@ -1142,7 +1143,7 @@ a {
   }
   
   .modal-main-image {
-    max-height: 40vh;
+    max-height: 35vh;
   }
   
   .modal-nav {
