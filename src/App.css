@@ -884,7 +884,7 @@ a {
 .modal-container {
   max-width: 98vw;
   max-height: 98vh;
-  width: 1840px;
+  width: 1660px;
   background: var(--bg-cream);
   border-radius: 24px;
   overflow: hidden;
@@ -946,8 +946,8 @@ a {
 .modal-gallery {
   position: relative;
   background: #f8f9fa;
-  min-height: 460px;
-  max-height: 75vh;
+  min-height: 410px;
+  max-height: 68vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -958,7 +958,7 @@ a {
 
 .modal-main-image {
   width: 100%;
-  max-height: 70vh;
+  max-height: 63vh;
   object-fit: contain;
   display: block;
   image-rendering: auto;
@@ -975,8 +975,8 @@ a {
   background: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -1010,7 +1010,7 @@ a {
   border-top: 1px solid var(--border);
   flex-shrink: 0;
   scrollbar-width: thin;
-  max-height: 115px;
+  max-height: 105px;
 }
 
 .modal-thumbnails::-webkit-scrollbar {
@@ -1028,8 +1028,8 @@ a {
 }
 
 .modal-thumb {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   flex-shrink: 0;
   cursor: pointer;
   border-radius: 6px;
@@ -1169,28 +1169,28 @@ a {
   }
   
   .modal-main-image {
-    max-height: 52vh;
+    max-height: 47vh;
   }
   
   .modal-gallery {
-    min-height: 300px;
-    max-height: 57vh;
+    min-height: 270px;
+    max-height: 51vh;
   }
   
   .modal-nav {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
   }
   
   .modal-thumb {
-    width: 69px;
-    height: 69px;
+    width: 62px;
+    height: 62px;
   }
   
   .modal-thumbnails {
     gap: 6px;
     padding: 10px;
-    max-height: 92px;
+    max-height: 83px;
   }
   
   .modal-info {
@@ -1205,13 +1205,13 @@ a {
 
 @media (max-width: 480px) {
   .modal-thumb {
-    width: 63px;
-    height: 63px;
+    width: 56px;
+    height: 56px;
   }
   
   .modal-nav {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
   }
   
   .modal-nav.prev {
@@ -1223,7 +1223,7 @@ a {
   }
   
   .modal-thumbnails {
-    max-height: 80px;
+    max-height: 72px;
   }
 }
 
