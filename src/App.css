@@ -109,19 +109,24 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.35rem 0;
+  padding: 0.5rem 0;
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-size: 1.24rem;
   font-weight: 700;
   letter-spacing: 0.03em;
+  line-height: 1;
 }
 
 .logo-img {
-  height: 80px;
+  height: 60px;
   width: auto;
-  max-width: 300px;
+  max-width: 280px;
+  object-fit: contain;
+  display: block;
 }
 
 .menu-button {
@@ -669,6 +674,11 @@ a {
     padding-top: 5rem;
   }
 
+  .logo-img {
+    height: 50px;
+    max-width: 200px;
+  }
+
   .menu-button {
     display: block;
   }
@@ -748,4 +758,453 @@ a {
   .hero-bullets li {
     font-size: 0.95rem;
   }
+
+  .logo-img {
+    height: 45px;
+    max-width: 180px;
+  }
+}
+/* Estilos para la galería de imágenes */
+.image-gallery {
+  width: 100%;
+  position: relative;
+  background: #f5f5f5;
+}
+
+.gallery-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #000;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  image-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.gallery-nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-nav.prev {
+  left: 10px;
+}
+
+.gallery-nav.next {
+  right: 10px;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.thumbnail.active {
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 760px) {
+  .gallery-nav {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+}
+/* Estilos para el modal - Versión corregida */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-container {
+  max-width: 95vw;
+  max-height: 90vh;
+  width: 1100px;
+  background: var(--bg-cream);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease;
+  border: 1px solid var(--border);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-strong);
+  flex-shrink: 0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.3rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-soft);
+  transition: color 0.2s;
+  line-height: 1;
+  padding: 0 8px;
+}
+
+.modal-close:hover {
+  color: var(--accent);
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Galería principal */
+.modal-gallery {
+  position: relative;
+  background: #0a0a0a;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modal-main-image {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: cover;
+  display: block;
+  image-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 8px;
+}
+
+/* Botones de navegación */
+.modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.modal-nav:hover {
+  background: var(--accent);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.modal-nav.prev {
+  left: 16px;
+}
+
+.modal-nav.next {
+  right: 16px;
+}
+
+/* Miniaturas - VERSIÓN CORREGIDA */
+.modal-thumbnails {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: var(--surface-strong);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+  scrollbar-width: thin;
+}
+
+.modal-thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+
+.modal-thumbnails::-webkit-scrollbar-track {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.modal-thumbnails::-webkit-scrollbar-thumb {
+  background: var(--accent-alt);
+  border-radius: 3px;
+}
+
+.modal-thumb {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid transparent;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+.modal-thumb:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-alt);
+}
+
+.modal-thumb.active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(0, 85, 164, 0.3);
+}
+
+.modal-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Información del proyecto */
+.modal-info {
+  padding: 1.5rem;
+  background: var(--bg-cream);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.modal-info h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--accent-alt);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.modal-info p {
+  margin: 0 0 1rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.modal-tag {
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.modal-result {
+  background: var(--surface-strong);
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  border-left: 3px solid var(--accent);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.modal-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.modal-actions .modal-btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.modal-actions .modal-btn-primary:hover {
+  background: var(--accent-deep);
+  transform: translateY(-2px);
+}
+
+.modal-actions .modal-btn-secondary {
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  background: var(--surface);
+}
+
+.modal-actions .modal-btn-secondary:hover {
+  border-color: var(--accent-alt);
+  color: var(--accent-alt);
+  transform: translateY(-2px);
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+  .modal-container {
+    max-width: 98vw;
+    max-height: 95vh;
+  }
+  
+  .modal-header h3 {
+    font-size: 1rem;
+  }
+  
+  .modal-main-image {
+    max-height: 40vh;
+  }
+  
+  .modal-nav {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .modal-thumb {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .modal-thumbnails {
+    gap: 8px;
+    padding: 12px;
+  }
+  
+  .modal-info {
+    padding: 1rem;
+  }
+  
+  .modal-actions a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-thumb {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .modal-nav {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .modal-nav.prev {
+    left: 8px;
+  }
+  
+  .modal-nav.next {
+    right: 8px;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card-clickable {
+  cursor: pointer;
 }
