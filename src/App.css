@@ -776,13 +776,13 @@ a {
   width: 100%;
   aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: #000;
+  background: #f8f9fa;
 }
 
 .gallery-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   image-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -936,9 +936,9 @@ a {
 /* Galería principal */
 .modal-gallery {
   position: relative;
-  background: #0a0a0a;
-  min-height: 300px;
-  max-height: 50vh;
+  background: #f8f9fa;
+  min-height: 350px;
+  max-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -947,8 +947,8 @@ a {
 
 .modal-main-image {
   width: 100%;
-  max-height: 45vh;
-  object-fit: cover;
+  max-height: 55vh;
+  object-fit: contain;
   display: block;
   image-rendering: auto;
   -webkit-font-smoothing: antialiased;
