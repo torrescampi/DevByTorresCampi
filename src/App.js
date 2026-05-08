@@ -19,8 +19,8 @@ const profile = {
   brand: 'Estanislao Torres Campi',
   logoImage: '/logo.png',
   name: 'Estanislao Torres Campi',
-  role: 'Desarrollador Full Stack',
-  headline: 'Creo paginas y aplicaciones que convierten ideas en resultados.',
+  role: 'Desarrollador Full-Stack',
+  headline: 'Tu Idea. Mi Código. Grandes Soluciones.',
   summary:
     'Ayudo a emprendedores y negocios a construir productos digitales rapidos, claros y con una identidad profesional.',
   availability: 'Disponible para nuevos proyectos',
@@ -88,7 +88,7 @@ const projects = [
       './images/inplanmex2.png',
       './images/inplanmex3.png'
     ],
-    tags: ['Diseño Web', 'UI', 'Responsive'],
+    tags: ['Diseño Web', 'HTML', 'CSS', 'JavaScript', 'Responsive'],
     demo: 'https://inplanmex.mx',
     demoLabel: 'Ver sitio',
     pages: inplanmexPages
@@ -106,7 +106,7 @@ const projects = [
       './images/hoster5.png',
       './images/hoster6.png'
     ],
-    tags: ['Sistema SaaS', 'UI', 'Producto'],
+    tags: ['Sistema SaaS', 'Node.js', 'Express', 'PostgreSQL'],
     repo: 'https://www.linkedin.com/company/hoster-pms/?viewAsMember=true',
     repoLabel: 'LinkedIn'
   },
@@ -122,7 +122,7 @@ const projects = [
       './images/tutiendaonline4.png',
       './images/tutiendaonline5.png'
     ],
-    tags: ['E‑commerce', 'React', 'Node.js'],
+    tags: ['E‑commerce', 'Next.js', 'NestJS', 'PostgreSQL'],
   },
   {
     id: 4,
@@ -136,7 +136,7 @@ const projects = [
       './images/pdventa4.png',
       './images/pdventa5.png'
     ],
-    tags: ['Dashboard', 'React', 'Chart.js', 'API Rest'],
+    tags: ['NestJS', 'Next.js', 'PostgreSQL', 'AI'],
   }
 ];
 
@@ -426,8 +426,7 @@ const About = () => (
   <section id="sobre-mi" className="section-block">
     <div className="container">
       <div className="section-heading fade-up">
-        <p className="eyebrow">Sobre mí</p>
-        <h2>Conoce mi forma de trabajar</h2>
+        <h2>Sobre mí</h2>
       </div>
 
       <div className="about-layout">
@@ -457,7 +456,7 @@ const About = () => (
             , participando en mejoras funcionales y de experiencia para el producto.
           </p>
           <p>
-            Entre mis proyectos personales tengo un sistema de punto de venta para comercios, una tienda online y el diseño del sitio web de inplanmex.mx y sus páginas vinculadas para marcas y unidades de negocio.
+            Entre mis proyectos personales tengo sistemas de punto de venta para comercios, tiendas online y diseños WEB, como el de inplanmex.mx y sus páginas vinculadas.
           </p>
           <p>
             Priorizo velocidad, claridad y una comunicación directa. En cada entrega me enfoco
@@ -553,8 +552,7 @@ const Projects = () => {
     <section id="proyectos" className="section-block">
       <div className="container">
         <div className="section-heading fade-up">
-          <p className="eyebrow">Portafolio</p>
-          <h2>Trabajo reciente</h2>
+          <h2>Ultimos Proyectos</h2>
         </div>
 
         <div className="project-grid">
@@ -630,7 +628,6 @@ const Contact = () => {
     <section id="contacto" className="section-block">
       <div className="container">
         <div className="section-heading fade-up">
-          <p className="eyebrow">Contacto</p>
           <h2>Hablemos de tu próximo proyecto</h2>
         </div>
 

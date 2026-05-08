@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root {
   --bg-cream: #fff8ef;
@@ -20,7 +20,7 @@
 
 body {
   margin: 0;
-  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
   color: var(--text-main);
   line-height: 1.6;
   background: #e0e0e0;
@@ -69,30 +69,34 @@ a {
 }
 
 .section-block {
-  padding: 5.2rem 0;
+  padding: 3rem 0;
   scroll-margin-top: 90px;
 }
 
 .eyebrow {
-  margin: 0 0 0.5rem;
+  margin: 0 0 2rem;
   text-transform: uppercase;
   letter-spacing: 0.11em;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--accent-alt);
+}
+
+.hero-copy .eyebrow {
+  font-size: 1.5rem;
 }
 
 .section-heading h2 {
   margin: 0;
   font-size: clamp(1.9rem, 4vw, 2.8rem);
-  font-family: 'DM Serif Display', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.14;
 }
 
 .hero-name {
-  margin: 0 0 0;
+  margin: 0 0 -0.5rem;
   font-size: 3rem;
-  font-family: 'DM Serif Display', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--text-main);
 }
 
@@ -169,7 +173,7 @@ a {
 }
 
 .hero-section {
-  padding-top: 6rem;
+  padding-top: 2rem;
 }
 
 .hero-grid {
@@ -180,10 +184,10 @@ a {
 }
 
 .hero-copy h1 {
-  margin: 0;
-  font-size: clamp(2.2rem, 6vw, 4.3rem);
+  margin: 0.1rem 0 0.8rem;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
   line-height: 1.04;
-  font-family: 'DM Serif Display', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .hero-copy p {
@@ -288,7 +292,7 @@ a {
 .hero-card h2 {
   margin: 0 0 1rem;
   font-size: 1.35rem;
-  font-family: 'DM Serif Display', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .stats-list {
@@ -354,7 +358,7 @@ a {
 .about-card h3 {
   margin: 0;
   font-size: 1.5rem;
-  font-family: 'DM Serif Display', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .about-card p {
@@ -667,11 +671,11 @@ a {
   }
 
   .section-block {
-    padding: 4.2rem 0;
+    padding: 2.5rem 0;
   }
 
   .hero-section {
-    padding-top: 5rem;
+    padding-top: 2rem;
   }
 
   .logo-img {
@@ -752,7 +756,7 @@ a {
   }
 
   .hero-copy h1 {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
 
   .hero-bullets li {
@@ -907,7 +911,7 @@ a {
 
 .modal-header h3 {
   margin: 0;
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
 }
 
