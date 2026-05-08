@@ -38,8 +38,7 @@ const navigation = [
 ];
 
 const stats = [
-  { label: 'Proyectos web lanzados', value: '21+' },
-  { label: 'Experiencia profesional', value: '4 anos' },
+  { label: 'Experiencia profesional', value: '4 años' },
   { label: 'Tiempo de respuesta', value: '< 24h' }
 ];
 
@@ -535,8 +534,8 @@ const ProjectCard = ({ project, onOpenModal }) => {
                 +{project.pages.length} páginas
               </span>
             )}
-            <div style={{ marginLeft: 'auto', color: 'var(--accent-alt)', fontWeight: 600 }}>
-              Click para detalles →
+            <div style={{ marginLeft: 'auto', color: 'var(--accent-alt)', fontWeight: 600 }} className="detail-text">
+              Más detalle →
             </div>
           </div>
         </div>
