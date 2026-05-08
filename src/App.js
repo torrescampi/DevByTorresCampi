@@ -38,6 +38,7 @@ const navigation = [
 ];
 
 const stats = [
+  { label: 'Proyectos web lanzados', value: '> 20' },
   { label: 'Experiencia profesional', value: '4 años' },
   { label: 'Tiempo de respuesta', value: '< 24h' }
 ];
